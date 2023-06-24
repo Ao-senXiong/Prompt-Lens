@@ -31,7 +31,7 @@ import { EmailIcon, TriangleUpIcon } from '@chakra-ui/icons'
 
 export const PostConsole = () => 
 <ChakraProvider resetCSS>
-    <Container minWidth={800}>
+    <Container minWidth={800} marginTop={150}>
       <Flex flexDirection="column" justifyContent="space-around">
         <Flex justifyContent="flex-end" mb={4}>
           <Text>World ID </Text>
