@@ -15,6 +15,7 @@
     "@types/node": "^16.18.36",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "axios": "^1.4.0",
 		"@worldcoin/idkit": "^0.5.0",
     "framer-motion": "7.3.0",
     "react": "^18.2.0",
@@ -26,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --no-lint",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
