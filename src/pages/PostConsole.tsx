@@ -52,7 +52,7 @@ export const PostConsole = () => {
 
     const generateCode = async (prompt: string): Promise<string> => {
         const apiUrl = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
-        const apiKey = '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';
+        const apiKey = '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';
 
         const response = await axios.post(
             apiUrl,
@@ -79,7 +79,7 @@ export const PostConsole = () => {
         <ChakraProvider>
             <Container minWidth={800} marginTop={150}>
                 <Flex flexDirection="column" justifyContent="space-around">
-                    <Heading marginBottom={10}>SPrompt</Heading>
+                    <Heading marginBottom={10}>Prompt Len</Heading>
 
                     <Flex justifyContent="flex-end" mb={4}>
                         <Text>User Id: {location.state.id}</Text>

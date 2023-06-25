@@ -103,7 +103,7 @@ export const Login = () => {
                     mt={10}
                 >
                     <Text fontSize="3xl" fontWeight="bold">
-                    ⚡️Welcome to Sprompt
+                    ⚡️Welcome to Prompt Len
                     </Text>
                     <Badge variant="subtle" colorScheme="pink" ml={1}>
                     BETA
@@ -122,7 +122,7 @@ export const Login = () => {
                     // walletConnectProjectId="get_this_from_walletconnect_portal"
                 >
                     {({ open }) => <Button variant="solid" size="md" onClick={open}>
-                                        Connect to WorldCoin Wallet
+                                        Connect to WorldCoin
                                     </Button>}
                 </IDKitWidget>
                 {/* <Button variant="solid" size="md" onClick={createWallet}>

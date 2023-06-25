@@ -1,46 +1,10 @@
-# Getting Started with Create React App
+# Getting Started with Prompt Len
+The idea behind the project is to onboard new users to the crypto world with enthusiasm and as easy as it can. The implemented prompt console is treated as a window for new people to interact with blockchain such as NFTs, Lens, DAOs, ethereum. Once users have been verified their identity in the World app, they can quickly onboard to the blockchain world by seeing the posts that are made from other people in Lens. If they have questions on anything that they do not know, ChatGPT will come in and help them understand the meaning. They can also utilize the prompt windows to perform actions such as making crypto transactions, posting, commenting, searching and so on. Our vision of the website is that it can be treated as a Google in blockchain but with the social feature as well. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The very first page of the website require user to sign in to their WorldCoin account. User will click the connect button to finish the verification, which will require the user to finish the process in the WorldCoin mobile app. After that, user are signed to the system and a user id which is returned from the WorldCoin will be shown at the beginning of the page. Later, users can use the prompt box to do whatever they want. For example, users can ask the questions through the prompt input box, and then ChatGpt will answer the questions for them. There are also a list of posts from lenster.xyz that are available for the user to explore and comment. We didn't finish the implementation for the send post functionality. But the idea is that we can have a command prefix to differentiate the questions to ChatGPT and the commands to blockchain such as '.' for ChatGPT and '.post' for posting to Lens. 
 
-## Available Scripts
+For future implementation, we will add more commands to the prompt such as '.buy' to exchange a coin. In addition, WorldCoin id should be used as user authentication to every action in the app including integrating it with existing wallet and Lens profile. 
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Instructions
+1. `npm install`
+2. `npm start`
