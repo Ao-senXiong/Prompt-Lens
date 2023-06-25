@@ -24,6 +24,9 @@ import {
   Button
 } from '@chakra-ui/react'
 import { EmailIcon } from '@chakra-ui/icons'
+// import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+// import { LocalWallet } from "@thirdweb-dev/wallets";
+
 
 
 
@@ -37,11 +40,42 @@ export const Login = () => {
 		});
 	};
 
-	const onSuccess = (result: ISuccessResult) => {
+	const onSuccess = async (result: ISuccessResult) => {
 		console.log(result);
-        
-        nav('/postConsole')
+        // const walletWithOptions = new LocalWallet(
+        //     {
+        //         walletId: "wallet-id",
+        //     },
+        // );
+        // // generate a random wallet
+        // await walletWithOptions.generate();
+        // // connect the wallet to the application
+        // await walletWithOptions.connect();
+        nav('/postConsole', {state: {id:result.nullifier_hash}} )
 	};
+
+    // const createWallet = async () => {
+        
+    //     // generate a random wallet
+    //     // await wallet.generate();
+    //     // // connect the wallet to the application
+    //     // await wallet.connect();
+
+    //     // console.log(wallet)
+    //     // // at any point, you can save the wallet to persistent storage
+    //     // await wallet.save(config);
+    //     // // and load it back up
+    //     // await wallet.load(config);
+
+    //     // // you can also export the wallet out of the application
+    //     // const exportedWallet = await wallet.export(config);
+    //     // // and import it back in
+    //     // await wallet.import(exportedWallet, config);
+
+    //     // // You can then use this wallet to perform transactions via the SDK
+    //     // const sdk = await ThirdwebSDK.fromWallet(wallet, "goerli");
+    // };
+
 
 	const urlParams = new URLSearchParams(window.location.search);
 	const credential_types = (urlParams.get("credential_types")?.split(",") as CredentialType[]) ?? [
@@ -91,7 +125,9 @@ export const Login = () => {
                                         Connect to WorldCoin Wallet
                                     </Button>}
                 </IDKitWidget>
-                
+                {/* <Button variant="solid" size="md" onClick={createWallet}>
+                    Create Local Wallet
+                </Button> */}
                 </Flex>
             </ChakraProvider>);
 }

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { ChakraProvider, Container, Flex, Text, Input, Button, Textarea, Grid, Image } from '@chakra-ui/react';
 import { TriangleUpIcon } from '@chakra-ui/icons';
+import {useLocation} from 'react-router-dom';
 import axios from 'axios';
 
 export const PostConsole = () => {
   const [prompt1, setPrompt1] = useState<string>('');
   const [prompt2, setPrompt2] = useState<string>('');
   const [codeSnippet, setCodeSnippet] = useState<string | null>(null);
+  const location = useLocation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +51,7 @@ export const PostConsole = () => {
       <Container minWidth={800} marginTop={150}>
         <Flex flexDirection="column" justifyContent="space-around">
           <Flex justifyContent="flex-end" mb={4}>
-            <Text>World ID </Text>
+            <Text>{location.state.id}</Text>
           </Flex>
           <Flex justifyContent="space-between" mb={4}>
             <Flex>
